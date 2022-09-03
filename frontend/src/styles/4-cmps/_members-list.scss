@@ -1,0 +1,38 @@
+.members-list {
+  color: #172b4d;
+  margin: 0 8px 8px 0;
+  header {
+    font-size: 12px;
+    font-weight: 600;
+    margin: -1px 8px 4px 0;  }
+  // POSITION SETTINGS
+  .avatars {
+    display: flex;
+    .avatar {
+      margin-inline-end: 4px;
+      cursor: pointer;
+      &.add{
+        border: none;
+        color: #56647d;
+        background-color: #eaecf000;
+      }
+    }
+
+
+  }
+}
+
+
+.members-list.card-preview{
+  // border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // padding-bottom: 9px;
+  // width: min-content;
+  margin-inline-end: 5px;
+  background-color: transparent;
+  &:hover{
+    background-color: transparent;
+  }
+}

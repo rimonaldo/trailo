@@ -1,0 +1,115 @@
+.card-actions {
+  padding: 0 16px 8px 8px;
+  font-size: rem(14px);
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans,
+    Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+
+  h3 {
+    margin: 0;
+    font-size: rem(12px);
+    color: #5e6c84;
+    font-weight: 600;
+  }
+  .suggested-tab {
+    margin: 0 0 16px;
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: -4px;
+    }
+    .settings-icon {
+      padding: 0 2px;
+      cursor: pointer;
+      border-radius: rem(3px);
+      &:hover {
+        background-color: #091e4214;
+      }
+    }
+  }
+  .add-to-card {
+    margin-bottom: -4px;
+  }
+  .action-btn-container {
+    width: 168px;
+    img {
+      margin: 0 7px 0 -4px;
+      width: rem(15px);
+    }
+    span {
+      margin-inline-start: -4px;
+      margin-inline-end: 7px;
+      &:active {
+        @include active;
+      }
+    }
+    span.txt {
+      margin-left: 1px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+      width: 100%;
+      @include headers-btns;
+      margin: 8px 0px 0px;
+      padding: 6px 12px;
+      text-align: left;
+      background-color: #091e420a;
+      &:hover {
+        background-color: #091e4214;
+      }
+      &:active {
+        @include active;
+      }
+    }
+
+    button:active span {
+      &:active {
+        @include active;
+      }
+    }
+  }
+  .removing {
+    .remove-icon {
+      color: white;
+    }
+    .removing-btn {
+      background-color: #b04632;
+      color: white;
+      &:hover {
+        background-color: #933b27;
+      }
+      &:active {
+        background-color: #6e2f1a;
+        color: white;
+      }
+    }
+  }
+  .removing-card-modal {
+    position: relative;
+    bottom: 200px;
+    left: 90px;
+    .remove-txt {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba(23, 43, 77, 0.37);
+    }
+    .final-remove {
+      margin-bottom: 12px;
+      justify-content: center;
+      background-color: #b04632;
+      color: white;
+      &:hover {
+        background-color: #933b27;
+      }
+      &:active {
+        background-color: #6e2f1a;
+        color: white;
+      }
+    }
+  }
+}

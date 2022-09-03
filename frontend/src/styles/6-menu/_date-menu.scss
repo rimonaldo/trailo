@@ -1,0 +1,142 @@
+//LIB CONTAINER
+.dp__flex_display_with_input {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  .dp__relative {
+    border: 0;
+  }
+
+  //CALENDER CONTAINER
+  .dp__calendar_wrap {
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+  //DAYS OF THE WEEK
+  .dp__calendar_header {
+    justify-content: space-between;
+    width: 100%;
+    font-size: rem(11px);
+    color: #6b778c;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  //MONTH AND YEAR TITLES
+  .dp__month_year_select {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+  }
+  .dp__month_year_select:nth-child(2) {
+    font-size: rem(14px);
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+.dp__month_year_select:nth-child(3) {
+      margin-left: 10px;
+    font-size: rem(14px);
+    justify-content: flex-start;
+  }
+  //CLOCK BTN
+  .dp__button_bottom {
+    display: none;
+  }
+}
+#save-date-btn {
+  justify-content: center;
+  background-color: #0079bf;
+  box-shadow: none;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  &:hover {
+    background-color: #026aa7;
+    outline: 0;
+  }
+  &:active {
+    background-color: #055a8c;
+  }
+}
+#remove-date-btn {
+  justify-content: center;
+  background-color: rgba(9, 30, 66, 0.08);
+  box-shadow: none;
+  border: none;
+  border-radius: 2px;
+  &:hover {
+    background-color: rgba(9, 30, 66, 0.08);
+  }
+  &:active {
+    background-color: #e4f0f6;
+    color: #0079bf;
+    outline: 0;
+  }
+}
+.date-form {
+  padding: 0 12px 12px;
+}
+.date-txt {
+  margin: 8px 0 12px;
+}
+
+
+.card-due-date{
+  position: relative;
+
+  .due-date-check {
+    position: absolute;
+    top: 31px;
+    left: 1px;
+    border-radius: 3px;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .check-mark {
+    position: absolute;
+    top: rem(31px);
+    left: rem(1px);
+    height: 1rem;
+    width: 1rem;
+    border-radius: rem(2px);
+    background-color: #fafbfc;
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset 0 0 0 2px #dfe1e6;
+  }
+  &:hover .due-date-check ~ .check-mark {
+    background-color: #ebecf0;
+  }
+  & .due-date-check:checked ~ .check-mark {
+    background-color: #0079bf;
+    box-shadow: none;
+  }
+  &:hover .due-date-check:checked ~ .check-mark {
+    background-color: #5ba4cf;
+  }
+  & .due-date-check:checked ~ .check-mark:after {
+    display: block;
+  }
+  .check-mark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  & .check-mark:after {
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: 1px solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}

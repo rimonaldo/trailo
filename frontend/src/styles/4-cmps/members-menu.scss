@@ -1,0 +1,54 @@
+// PREVIEW POSITION
+.members-modal.preview {
+  .modal {
+    top: 6px;
+    left: 5em;
+  }
+}
+.members-modal {
+  .modal {
+    ul {
+      border: none;
+    }
+    .members {
+      .member-container {
+        position: relative;
+        top: 2px;
+        left: 1px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 40px;
+
+        &:hover {
+          background-color: #f5f6f8;
+        }
+        .member {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          .member-name {
+            span {
+              margin-inline-end: 3px;
+            }
+          }
+          .avatar {
+            margin-inline-end: 8px;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+          }
+        }
+        .check-icon {
+          position: relative;
+          right: 0.7em;
+        }
+      }
+    }
+  }
+}

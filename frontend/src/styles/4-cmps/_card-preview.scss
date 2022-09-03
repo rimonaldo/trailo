@@ -1,0 +1,211 @@
+.card-list-container {
+  overflow: auto;
+}
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  overflow: visible !important; 
+}
+
+.card-list {
+  margin: 0 4px;
+  padding: 0px 4px;
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #dadbe2;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #bfc4ce;
+    border-radius: 4px;
+  }
+
+  .card-ghost {
+    transition: transform 0.18s ease;
+    transform: rotateZ(5deg);
+    z-index: 10;
+  }
+  .card-ghost-drop {
+    transition: transform 0.18s ease-in-out;
+    transform: rotateZ(0deg);
+    z-index: 10;
+  }
+
+  textarea,
+  input {
+    outline: none;
+    background-color: inherit;
+    width: 100%;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  .card-preview {
+    box-shadow: 0 1px 0 #091e4240;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 300px;
+    line-height: 20px;
+    color: #172b4d;
+    cursor: pointer;
+    &:hover {
+      background-color: #f2f1f1de;
+    }
+    .card-title {
+      margin: 0 0 4px;
+    }
+
+    .labels {
+      display: flex;
+      .card-preview-label {
+        height: 8px;
+        width: 40px;
+        padding-inline-end: 3px;
+        padding-block-end: 3px;
+        margin-inline-end: 5px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+.card-preview-cover {
+  min-height: 32px;
+  position: relative;
+
+  .card-color {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    height: 32px;
+  }
+  .card-img {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    height: 163.333px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+.card-preview-details {
+  padding: rem(6px);
+  position: relative;
+  .all-todos-done {
+    background-color: #61bd4f;
+    border-radius: 3px;
+    span {
+      color: #fff;
+    }
+  }
+  .card-preview-labels {
+    .show-labels-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .hide-labels-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .label-preview-show {
+      // z-index: 20;
+      color: white;
+      font-size: rem(12px);
+      font-weight: 700;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+      padding: 0 8px;
+      margin: 0 4px 4px 0;
+      border-radius: rem(4px);
+      height: 16px;
+      min-width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s;
+    }
+
+    .label-preview-hide {
+      display: block;
+      // z-index: 20;
+      height: 8px;
+      min-width: 40px;
+      transition: height 0.15s ease-in-out;
+      margin: 0 4px 4px 0;
+      border-radius: rem(4px);
+      transition: all 0.5s;
+    }
+  }
+}
+.card-checklist-count {
+  padding-inline-end: 6px;
+  color: #445470;
+  .count {
+    font-size: rem(12px);
+    margin-inline-start: 2px;
+  }
+  .checklist-icon {
+    padding: 1px;
+    width: 1rem;
+    height: 1rem;
+    margin: 1px 3px 7px 3px;
+  }
+}
+.card-attachment-count {
+  margin-inline-end: 10px;
+  align-items: center;
+  color: #445470;
+  .count {
+    margin-inline-start: 4px;
+    font-size: rem(12px);
+  }
+  .attach-icon {
+    // margin: 8px 3px 8px 3px;
+    margin-inline-start: 4px;
+  }
+}
+.duedate-preview {
+  border-radius: 3px;
+  padding: 2px 4px;
+  margin-inline-end: 4px;
+  display: flex;
+  align-items: center;
+  font-size: rem(12px);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans,
+    Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+
+  .unchecked-icon {
+    position: relative;
+  }
+  .check-icon {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+  }
+  .duedate-txt {
+    padding: 0 2px 0 2px;
+    margin-inline-start: 2px;
+  }
+}
+.avatar-list-card-preview{
+  justify-content: flex-end;
+
+
+  // width: ;
+}
+.actions-container{
+  flex-wrap: wrap;
+}
+
+.description-preview {
+  margin-inline-start: 4px;
+  margin-inline-end: 8px;
+  margin-top: 1px;
+}
