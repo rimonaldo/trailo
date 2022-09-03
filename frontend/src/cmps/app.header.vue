@@ -76,7 +76,7 @@
     </div>
 
     <div class="right-header flex">
-      <button
+      <!-- <button
         :style="{
           backgroundColor: headerBgColor,
           color: headerColor,
@@ -85,7 +85,7 @@
         class="notifications"
       >
         <img src="../styles/svgs/notification.svg" alt="" />
-      </button>
+      </button> -->
       <div class="profile" @click="openMenu('account')">
         <button
           class="avatar"

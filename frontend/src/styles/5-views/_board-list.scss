@@ -1,38 +1,38 @@
 .home-page {
-  position: relative;
-  top: 26px;
-  // left: 4px;
-  //   background-color: green;
-  //   height: 100vh;
+  // position: relative;
+  // top: 26px;
+  padding-block-start: 26px;
   display: flex;
   width: 95.5%;
   max-width: 1120px;
   margin: 0 auto;
   color: #172b4d;
   .side-menu {
-    // height: 500px;
     min-width: 270px;
-    // border: 1px black solid;
-    // padding-bottom: 200px;
   }
   .galleries {
     width: 100%;
   }
-  @media only screen and(max-width:1200px){
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @media only screen and(max-width:730px){
+    .side-menu{
+      display: none;
+    }
+    // max-width: 1100px;
+    // margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
   }
 }
 
 // SIDE MENU
 .side-menu {
+  
   .icon {
     font-size: 16px;
     // padding-right: px;
     margin-inline-start: 2px;
+    
   }
   ul {
     list-style: none;
@@ -185,12 +185,13 @@
     color: #172b4d;
   }
   // LIST -->
-  .board-preview .gallery {
+  .gallery {
     position: relative;
     left: 6px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(193.8px, 1fr));
-    gap: 5px;
+    grid-template-columns: repeat(auto-fill, min(40vw, 194px));
+    // gap: 5px;
+    justify-content: space-around;
     row-gap: 30px;
     // ITEM -->
     .item {
